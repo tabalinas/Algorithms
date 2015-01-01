@@ -7,7 +7,7 @@ namespace MoneyChange.Test {
     public class MoneyChangeTests {
 
         [TestMethod]
-        public void MoneyChangeWithDPTest() {
+        public void MoneyChangeWithBacktrackingTest() {
             // arrange
             int[] coins = new int[] { 1, 5, 7 };
             int targetSum = 11;
