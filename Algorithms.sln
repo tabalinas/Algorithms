@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicProgramming", "DynamicProgramming", "{9ECF396F-2998-4FA7-B1EE-B081832718FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyChange", "DynamicProgramming\MoneyChange\MoneyChange.csproj", "{B5379DFD-438C-48D3-9279-6896C8CF2122}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyChange.Test", "DynamicProgramming\MoneyChange.Test\MoneyChange.Test.csproj", "{42942C36-8184-47DC-A210-5DBD87E77251}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5379DFD-438C-48D3-9279-6896C8CF2122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5379DFD-438C-48D3-9279-6896C8CF2122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5379DFD-438C-48D3-9279-6896C8CF2122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5379DFD-438C-48D3-9279-6896C8CF2122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42942C36-8184-47DC-A210-5DBD87E77251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42942C36-8184-47DC-A210-5DBD87E77251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42942C36-8184-47DC-A210-5DBD87E77251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42942C36-8184-47DC-A210-5DBD87E77251}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5379DFD-438C-48D3-9279-6896C8CF2122} = {9ECF396F-2998-4FA7-B1EE-B081832718FB}
+		{42942C36-8184-47DC-A210-5DBD87E77251} = {9ECF396F-2998-4FA7-B1EE-B081832718FB}
+	EndGlobalSection
+EndGlobal
