@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MoneyChange
 {
+    /// <summary>
+    /// How can a given amount of money be made with the least number of coins of given denominations
+    /// </summary>
     public class ChangeCombiner
     {
         private readonly int[] _coins;
