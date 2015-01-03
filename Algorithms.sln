@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyChange", "Recursion\Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyChange.Test", "Recursion\MoneyChange.Test\MoneyChange.Test.csproj", "{7B40A36B-B0A9-4C71-B460-F588266AB404}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxValueContiguousSubsequence", "DynamicProgramming\MaxValueContiguousSubsequence\MaxValueContiguousSubsequence.csproj", "{51A8D86F-23D0-4338-9A2C-2C3104B9BCE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxValueContiguousSubsequence.Test", "DynamicProgramming\MaxValueContiguousSubsequence.Test\MaxValueContiguousSubsequence.Test.csproj", "{B4B3D739-615C-417F-B91A-61ECDB11FD86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{7B40A36B-B0A9-4C71-B460-F588266AB404}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B40A36B-B0A9-4C71-B460-F588266AB404}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B40A36B-B0A9-4C71-B460-F588266AB404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A8D86F-23D0-4338-9A2C-2C3104B9BCE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A8D86F-23D0-4338-9A2C-2C3104B9BCE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A8D86F-23D0-4338-9A2C-2C3104B9BCE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A8D86F-23D0-4338-9A2C-2C3104B9BCE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4B3D739-615C-417F-B91A-61ECDB11FD86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B3D739-615C-417F-B91A-61ECDB11FD86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B3D739-615C-417F-B91A-61ECDB11FD86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B3D739-615C-417F-B91A-61ECDB11FD86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +58,7 @@ Global
 		{42942C36-8184-47DC-A210-5DBD87E77251} = {9ECF396F-2998-4FA7-B1EE-B081832718FB}
 		{C072D077-55CE-4FA6-B44E-AE9CA0C80C20} = {E580BE7D-0B87-48A6-854B-F9A6130C5C98}
 		{7B40A36B-B0A9-4C71-B460-F588266AB404} = {E580BE7D-0B87-48A6-854B-F9A6130C5C98}
+		{51A8D86F-23D0-4338-9A2C-2C3104B9BCE2} = {9ECF396F-2998-4FA7-B1EE-B081832718FB}
+		{B4B3D739-615C-417F-B91A-61ECDB11FD86} = {9ECF396F-2998-4FA7-B1EE-B081832718FB}
 	EndGlobalSection
 EndGlobal
