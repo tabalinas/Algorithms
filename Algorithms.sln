@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestIncreasingSubsequenc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestIncreasingSubsequence", "Recursion\LongestIncreasingSubsequence\LongestIncreasingSubsequence.csproj", "{F560764D-9D1F-4978-ABEB-618C6F1AEF77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knapsack.Test", "DynamicProgramming\Knapsack.Test\Knapsack.Test.csproj", "{1AACD9E2-AA23-4C05-B0A6-BA6216B33DD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knapsack", "DynamicProgramming\Knapsack\Knapsack.csproj", "{2EB6AA86-22F4-4BEE-9EE0-8328974FE37B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +77,14 @@ Global
 		{F560764D-9D1F-4978-ABEB-618C6F1AEF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F560764D-9D1F-4978-ABEB-618C6F1AEF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F560764D-9D1F-4978-ABEB-618C6F1AEF77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AACD9E2-AA23-4C05-B0A6-BA6216B33DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AACD9E2-AA23-4C05-B0A6-BA6216B33DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AACD9E2-AA23-4C05-B0A6-BA6216B33DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AACD9E2-AA23-4C05-B0A6-BA6216B33DD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB6AA86-22F4-4BEE-9EE0-8328974FE37B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB6AA86-22F4-4BEE-9EE0-8328974FE37B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB6AA86-22F4-4BEE-9EE0-8328974FE37B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB6AA86-22F4-4BEE-9EE0-8328974FE37B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,5 +100,7 @@ Global
 		{BC6263E1-E243-4396-9C52-C3C5D208EF21} = {9ECF396F-2998-4FA7-B1EE-B081832718FB}
 		{C6DF61B5-A7FF-4111-ABA0-ED261E2ECA38} = {E580BE7D-0B87-48A6-854B-F9A6130C5C98}
 		{F560764D-9D1F-4978-ABEB-618C6F1AEF77} = {E580BE7D-0B87-48A6-854B-F9A6130C5C98}
+		{1AACD9E2-AA23-4C05-B0A6-BA6216B33DD0} = {9ECF396F-2998-4FA7-B1EE-B081832718FB}
+		{2EB6AA86-22F4-4BEE-9EE0-8328974FE37B} = {9ECF396F-2998-4FA7-B1EE-B081832718FB}
 	EndGlobalSection
 EndGlobal
