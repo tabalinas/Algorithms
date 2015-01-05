@@ -8,7 +8,7 @@ namespace LinkedList {
 
     public class LinkedList<T> {
 
-        private class Node {
+        public class Node {
             public T Value { get; set; }
             public Node Next { get; set; }
 
@@ -17,7 +17,7 @@ namespace LinkedList {
             }
         }
 
-        private Node Head { get; set; }
+        public Node Head { get; set; }
 
         public LinkedList(T[] items) {
             Insert(items);
