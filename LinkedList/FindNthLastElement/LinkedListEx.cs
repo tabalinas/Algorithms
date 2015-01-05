@@ -4,8 +4,8 @@ using System.Text;
 using System.Threading.Tasks;
 using LinkedList;
 
-namespace FindNthLastElement
-{
+namespace FindNthLastElement {
+
     public static class LinkedListEx {
 
         public static T FindLast<T>(this LinkedList<T> list, int n) {
@@ -23,4 +23,5 @@ namespace FindNthLastElement
         }
 
     }
+
 }
