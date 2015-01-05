@@ -7,7 +7,7 @@ namespace Knapsack.Test {
     public class KnapsackTests {
     
         [TestMethod]
-        public void CombineKnapsack() {
+        public void CombineKnapsackTest() {
             // arrange
             KnapsackItem[] items = new KnapsackItem[] {
                 new KnapsackItem(50, 15),

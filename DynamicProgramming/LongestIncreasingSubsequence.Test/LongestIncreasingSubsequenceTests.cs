@@ -7,7 +7,7 @@ namespace LongestIncreasingSubsequence.Test {
     public class LongestIncreasingSubsequenceTests {
         
         [TestMethod]
-        public void FindLongestIncreasingSubsequence() {
+        public void FindLongestIncreasingSubsequenceTest() {
             // arrange
             int[] array = new int[] { 100, 1, 11, 2, 12, 3, 4 };
 
