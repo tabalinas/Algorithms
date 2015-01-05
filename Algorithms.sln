@@ -49,6 +49,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseLinkedList.Test", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseLinkedList", "LinkedList\ReverseLinkedList\ReverseLinkedList.csproj", "{9BDFC224-8C26-4DD6-97DE-4A7DE9DBDADB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReorderingLinkedList.Test", "LinkedList\ReorderingLinkedList.Test\ReorderingLinkedList.Test.csproj", "{6F0CBD65-9209-4581-B244-635BFF5FF3C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReorderingLinkedList", "LinkedList\ReorderingLinkedList\ReorderingLinkedList.csproj", "{9932B615-A1D9-49C2-A847-0493C35F57FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +139,14 @@ Global
 		{9BDFC224-8C26-4DD6-97DE-4A7DE9DBDADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BDFC224-8C26-4DD6-97DE-4A7DE9DBDADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BDFC224-8C26-4DD6-97DE-4A7DE9DBDADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F0CBD65-9209-4581-B244-635BFF5FF3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0CBD65-9209-4581-B244-635BFF5FF3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0CBD65-9209-4581-B244-635BFF5FF3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0CBD65-9209-4581-B244-635BFF5FF3C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9932B615-A1D9-49C2-A847-0493C35F57FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9932B615-A1D9-49C2-A847-0493C35F57FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9932B615-A1D9-49C2-A847-0493C35F57FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9932B615-A1D9-49C2-A847-0493C35F57FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,5 +172,7 @@ Global
 		{768C92AC-C21B-46E1-8EC4-C38819803BF3} = {150A9E8E-6204-4927-8286-A171C15FF075}
 		{9D2D01AF-1F71-4A4D-A409-3D6B8BD03F7F} = {150A9E8E-6204-4927-8286-A171C15FF075}
 		{9BDFC224-8C26-4DD6-97DE-4A7DE9DBDADB} = {150A9E8E-6204-4927-8286-A171C15FF075}
+		{6F0CBD65-9209-4581-B244-635BFF5FF3C6} = {150A9E8E-6204-4927-8286-A171C15FF075}
+		{9932B615-A1D9-49C2-A847-0493C35F57FC} = {150A9E8E-6204-4927-8286-A171C15FF075}
 	EndGlobalSection
 EndGlobal
