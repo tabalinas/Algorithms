@@ -72,6 +72,15 @@ namespace LinkedList {
             return false;
         }
 
+        public Node Find(T value) {
+            for(Node current = Head; current != null; current = current.Next) {
+                if(current.Value.Equals(value))
+                    return current;
+            }
+
+            return null;
+        }
+
         public override string ToString() {
             if(Head == null)
                 return "";
