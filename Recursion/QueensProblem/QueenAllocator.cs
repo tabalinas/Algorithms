@@ -62,6 +62,7 @@ namespace QueensProblem {
         private bool IsSameDiagonal(BoardSquare sq1, BoardSquare sq2) {
             return Math.Abs(sq1.Col - sq2.Col) == Math.Abs(sq1.Row - sq2.Row);
         }
+
     }
 
 }
