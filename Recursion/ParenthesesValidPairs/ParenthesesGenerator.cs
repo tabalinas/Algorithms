@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ParenthesesValidPairs {
 
+    /// <summary>
+    /// Generate all valid (properly opened and closed) combinations of n-pairs of parentheses
+    /// </summary>
     public class ParenthesesGenerator {
 
         private HashSet<string> _result;
