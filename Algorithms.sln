@@ -53,6 +53,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReorderingLinkedList.Test",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReorderingLinkedList", "LinkedList\ReorderingLinkedList\ReorderingLinkedList.csproj", "{9932B615-A1D9-49C2-A847-0493C35F57FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParenthesesValidPairs", "Recursion\ParenthesesValidPairs\ParenthesesValidPairs.csproj", "{2F5DE67E-4B04-4D15-BC17-3853E243D561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParenthesesValidPair.Test", "Recursion\ParenthesesValidPair.Test\ParenthesesValidPair.Test.csproj", "{1CD112E8-266D-4BB4-9C91-45A51004A9D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +151,14 @@ Global
 		{9932B615-A1D9-49C2-A847-0493C35F57FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9932B615-A1D9-49C2-A847-0493C35F57FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9932B615-A1D9-49C2-A847-0493C35F57FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F5DE67E-4B04-4D15-BC17-3853E243D561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F5DE67E-4B04-4D15-BC17-3853E243D561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F5DE67E-4B04-4D15-BC17-3853E243D561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F5DE67E-4B04-4D15-BC17-3853E243D561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD112E8-266D-4BB4-9C91-45A51004A9D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD112E8-266D-4BB4-9C91-45A51004A9D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD112E8-266D-4BB4-9C91-45A51004A9D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD112E8-266D-4BB4-9C91-45A51004A9D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -174,5 +186,7 @@ Global
 		{9BDFC224-8C26-4DD6-97DE-4A7DE9DBDADB} = {150A9E8E-6204-4927-8286-A171C15FF075}
 		{6F0CBD65-9209-4581-B244-635BFF5FF3C6} = {150A9E8E-6204-4927-8286-A171C15FF075}
 		{9932B615-A1D9-49C2-A847-0493C35F57FC} = {150A9E8E-6204-4927-8286-A171C15FF075}
+		{2F5DE67E-4B04-4D15-BC17-3853E243D561} = {E580BE7D-0B87-48A6-854B-F9A6130C5C98}
+		{1CD112E8-266D-4BB4-9C91-45A51004A9D3} = {E580BE7D-0B87-48A6-854B-F9A6130C5C98}
 	EndGlobalSection
 EndGlobal
