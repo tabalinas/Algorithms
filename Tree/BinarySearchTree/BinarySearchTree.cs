@@ -101,6 +101,23 @@ namespace BinarySearchTree {
             handler(node.Value);
         }
 
+        public void LevelOrder(Action<T> handler) {
+            var queue = new Queue<Node>();
+            queue.Enqueue(Root);
+
+            while(queue.Count > 0) {
+                var node = queue.Dequeue();
+                
+                if(node == null)
+                    continue;
+
+                handler(node.Value);
+
+                queue.Enqueue(node.Left);
+                queue.Enqueue(node.Right);
+            }
+        }
+
         public override string ToString() {
             return Stringify(Root);
         }

@@ -96,5 +96,22 @@ namespace BinarySearchTree.Test {
             Assert.AreEqual("1 9 5 15 10 ", result.ToString());
         }
 
+        [TestMethod]
+        public void LevelOrderTraversalTest() {
+            // arrange
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10);
+            tree.Add(5);
+            tree.Add(15);
+            tree.Add(1);
+            tree.Add(9);
+
+            // act
+            StringBuilder result = new StringBuilder();
+            tree.LevelOrder(val => result.Append(val + " "));
+
+            // assert
+            Assert.AreEqual("10 5 15 1 9 ", result.ToString());
+        }
     }
 }
