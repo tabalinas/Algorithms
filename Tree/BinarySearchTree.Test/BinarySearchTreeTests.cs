@@ -232,5 +232,39 @@ namespace BinarySearchTree.Test {
             // assert
             Assert.AreEqual("((3) <- 5 -> (7))", tree.ToString());
         }
+
+        [TestMethod]
+        public void BalancedBinarySearchTreeTest() {
+            // arrange
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10);
+            tree.Add(5);
+            tree.Add(15);
+            tree.Add(7);
+
+            // act
+            bool isBalanced = tree.IsBalanced();
+
+            // assert
+            Assert.IsTrue(isBalanced);
+        }
+
+        [TestMethod]
+        public void NotBalancedBinarySearchTreeTest() {
+            // arrange
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10);
+            tree.Add(5);
+            tree.Add(15);
+            tree.Add(7);
+            tree.Add(3);
+            tree.Add(1);
+
+            // act
+            bool isBalanced = tree.IsBalanced();
+
+            // assert
+            Assert.IsFalse(isBalanced);
+        }
     }
 }

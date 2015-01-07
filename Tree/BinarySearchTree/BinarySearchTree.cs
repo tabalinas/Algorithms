@@ -177,6 +177,26 @@ namespace BinarySearchTree {
             }
         }
 
+        public bool IsBalanced() {
+            return IsBalanced(Root);
+        }
+
+        private bool IsBalanced(Node node) {
+            if(node == null)
+                return true; 
+
+            return (Math.Abs(Height(node.Left) - Height(node.Right)) <= 1)
+                && IsBalanced(node.Left)
+                && IsBalanced(node.Right);
+        }
+
+        private int Height(Node node) {
+            if(node == null)
+                return 0;
+
+            return 1 + Math.Max(Height(node.Left), Height(node.Right));
+        }
+
         public override string ToString() {
             return Stringify(Root);
         }
