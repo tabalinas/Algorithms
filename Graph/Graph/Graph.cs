@@ -70,6 +70,53 @@ namespace Graph {
             }
         }
 
+        public IList<T> BreadthFirstSearch(T from, T to) {
+            if(!Vertices.ContainsKey(from) || !Vertices.ContainsKey(to)) {
+                throw new ArgumentException("Trying to search path between non-existing vertices!");
+            }
+
+            Vertex fromVertex = Vertices[from];
+            Vertex toVertex = Vertices[to];
+
+            var visited = new HashSet<Vertex>();
+            var path = new Dictionary<Vertex, Vertex>();
+            var queue = new Queue<Vertex>();
+            visited.Add(fromVertex);
+            queue.Enqueue(fromVertex);
+
+            while(queue.Count > 0) {
+                var vertex = queue.Dequeue();
+                
+                if(vertex == toVertex) {
+                    return RestorePath(fromVertex, toVertex, path);
+                }
+
+                foreach(var edge in vertex.Edges) {
+                    if(visited.Contains(edge.Vertex))
+                        continue;
+
+                    path[edge.Vertex] = vertex;
+                    visited.Add(edge.Vertex);
+                    queue.Enqueue(edge.Vertex);
+                }
+            }
+
+            return null;
+        }
+
+        private IList<T> RestorePath(Vertex fromVertex, Vertex toVertex, Dictionary<Vertex, Vertex> path) {
+            var result = new List<T>();
+
+            Vertex vertex = toVertex;
+            while(vertex != fromVertex) {
+                result.Insert(0, vertex.Value);
+                vertex = path[vertex];
+            }
+            result.Insert(0, vertex.Value);
+
+            return result;
+        }
+
         public override string ToString() {
             var result = new StringBuilder();
 
