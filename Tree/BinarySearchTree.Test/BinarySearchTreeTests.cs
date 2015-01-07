@@ -113,5 +113,124 @@ namespace BinarySearchTree.Test {
             // assert
             Assert.AreEqual("10 5 15 1 9 ", result.ToString());
         }
+
+        [TestMethod]
+        public void RemoveNodeWithoutChildrenTest() {
+            // arrange
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10);
+            tree.Add(5);
+            tree.Add(15);
+
+            // act
+            tree.Remove(5);
+
+            // assert
+            Assert.AreEqual("(10 -> (15))", tree.ToString());
+        }
+
+        [TestMethod]
+        public void RemoveNodeWithSingleLeftChildTest() {
+            // arrange
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10);
+            tree.Add(15);
+            tree.Add(5);
+            tree.Add(1);
+
+            // act
+            tree.Remove(5);
+
+            // assert
+            Assert.AreEqual("((1) <- 10 -> (15))", tree.ToString());
+        }
+
+        [TestMethod]
+        public void RemoveNodeWithSingleRightChildTest() {
+            // arrange
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10);
+            tree.Add(15);
+            tree.Add(5);
+            tree.Add(7);
+            tree.Add(6);
+            tree.Add(8);
+
+            // act
+            tree.Remove(5);
+
+            // assert
+            Assert.AreEqual("(((6) <- 7 -> (8)) <- 10 -> (15))", tree.ToString());
+        }
+
+        [TestMethod]
+        public void RemoveNodeWithBothChildrenAndLeftChildWithoutRightSubtreeTest() {
+            // arrange
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10);
+            tree.Add(15);
+            tree.Add(5);
+            tree.Add(9);
+            tree.Add(3);
+            tree.Add(1);
+
+            // act
+            tree.Remove(5);
+
+            // assert
+            Assert.AreEqual("(((1) <- 3 -> (9)) <- 10 -> (15))", tree.ToString());
+        }
+
+        [TestMethod]
+        public void RemoveNodeWithBothChildrenAndLeftChildWithRightSubtreeTest() {
+            // arrange
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10);
+            tree.Add(7);
+            tree.Add(15);
+            tree.Add(3);
+            tree.Add(9);
+            tree.Add(1);
+            tree.Add(5);
+            tree.Add(4);
+            tree.Add(6);
+
+            // act
+            tree.Remove(7);
+
+            // assert
+            Assert.AreEqual("((((1) <- 3 -> ((4) <- 5)) <- 6 -> (9)) <- 10 -> (15))", tree.ToString());
+        }
+
+        [TestMethod]
+        public void RemoveRootNodeWithBothChildrenTest() {
+            // arrange
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10);
+            tree.Add(5);
+            tree.Add(15);
+
+            // act
+            tree.Remove(10);
+
+            // assert
+            Assert.AreEqual("(5 -> (15))", tree.ToString());
+        }
+
+        [TestMethod]
+        public void RemoveRootNodeWithSingleChildTest() {
+            // arrange
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+            tree.Add(10);
+            tree.Add(5);
+            tree.Add(3);
+            tree.Add(7);
+
+            // act
+            tree.Remove(10);
+
+            // assert
+            Assert.AreEqual("((3) <- 5 -> (7))", tree.ToString());
+        }
     }
 }

@@ -31,11 +31,11 @@ namespace BinarySearchTree {
                 return node;
 
             switch(node.Value.CompareTo(parent.Value)) {
-                case 1:
-                    parent.Right = Add(parent.Right, node);
-                    break;
                 case -1:
                     parent.Left = Add(parent.Left, node);
+                    break;
+                case 1:
+                    parent.Right = Add(parent.Right, node);
                     break;
                 default:
                     throw new Exception("Binary search tree should not contain duplicates!");
@@ -53,12 +53,71 @@ namespace BinarySearchTree {
                 return false;
 
             switch(value.CompareTo(node.Value)) {
-                case 1:
-                    return Contains(node.Right, value);    
                 case -1:
                     return Contains(node.Left, value);
+                case 1:
+                    return Contains(node.Right, value);
                 default:
                     return true;
+            }
+        }
+
+        public void Remove(T value) {
+            Remove(Root, value, null);
+        }
+
+        private void Remove(Node node, T value, Node parent) {
+            if(node == null)
+                return;
+
+            switch(value.CompareTo(node.Value)) {
+                case 1:
+                    Remove(node.Right, value, node);
+                    break;
+                case -1:
+                    Remove(node.Left, value, node);
+                    break;
+                default:
+                    DoRemove(node, value, parent);
+                    break;
+            }
+        }
+
+        private void DoRemove(Node node, T value, Node parent) {
+            if(node.Left == null && node.Right == null) {
+                SetParentChild(parent, node, null);
+            } else if(node.Left == null) {
+                SetParentChild(parent, node, node.Right);
+            } else if(node.Right == null) {
+                SetParentChild(parent, node, node.Left);
+            } else {
+                ReplaceNodeWithRightMostChildInLeftSubtree(node);
+            }
+        }
+
+        private void ReplaceNodeWithRightMostChildInLeftSubtree(Node node) {
+            var parent = node;
+            var current = node.Left;
+            
+            while(current.Right != null) {
+                parent = current;
+                current = current.Right;
+            }
+
+            node.Value = current.Value;
+            SetParentChild(parent, current, current.Left);
+        }
+
+        private void SetParentChild(Node parent, Node oldNode, Node newNode) {
+            if(parent == null) {
+                Root = newNode;
+                return;
+            }
+
+            if(parent.Left == oldNode) {
+                parent.Left = newNode;
+            } else {
+                parent.Right = newNode;
             }
         }
 
