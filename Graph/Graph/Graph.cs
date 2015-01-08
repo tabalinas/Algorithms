@@ -70,6 +70,43 @@ namespace Graph {
             }
         }
 
+        public IList<T> DepthFirstSearch(T from, T to) {
+            if(!Vertices.ContainsKey(from) || !Vertices.ContainsKey(to)) {
+                throw new ArgumentException("Trying to search path between non-existing vertices!");
+            }
+
+            Vertex fromVertex = Vertices[from];
+            Vertex toVertex = Vertices[to];
+
+            var visited = new HashSet<Vertex>();
+            var path = new Dictionary<Vertex, Vertex>();
+
+            if(DepthFirstSearch(fromVertex, toVertex, visited, path)) {
+                return RestorePath(fromVertex, toVertex, path);
+            }   
+
+            return null;
+        }
+
+        private bool DepthFirstSearch(Vertex vertex, Vertex toVertex, HashSet<Vertex> visited, Dictionary<Vertex, Vertex> path) {
+            if(vertex == toVertex)
+                return true;
+
+            visited.Add(vertex);
+
+            foreach(var edge in vertex.Edges) {
+                if(visited.Contains(edge.Vertex))
+                    continue;
+
+                path[edge.Vertex] = vertex;
+
+                if(DepthFirstSearch(edge.Vertex, toVertex, visited, path))
+                    return true;
+            }
+
+            return false;
+        }
+
         public IList<T> BreadthFirstSearch(T from, T to) {
             if(!Vertices.ContainsKey(from) || !Vertices.ContainsKey(to)) {
                 throw new ArgumentException("Trying to search path between non-existing vertices!");
