@@ -109,6 +109,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProducerConsumer", "Multith
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProducerConsumer.App", "Multithreading\ProducerConsumer.App\ProducerConsumer.App.csproj", "{84A313AA-C4D6-4A13-9F8E-E31C2D9CB441}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreeLevelPrinting.Test", "Tree\BinaryTreeLevelPrinting.Test\BinaryTreeLevelPrinting.Test.csproj", "{D94E2798-1B12-4BB4-A796-E21EF90C2E6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreeLevelPrinting", "Tree\BinaryTreeLevelPrinting\BinaryTreeLevelPrinting.csproj", "{06BE685E-373C-400B-8F81-AB724401B4C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -291,6 +295,14 @@ Global
 		{84A313AA-C4D6-4A13-9F8E-E31C2D9CB441}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84A313AA-C4D6-4A13-9F8E-E31C2D9CB441}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84A313AA-C4D6-4A13-9F8E-E31C2D9CB441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D94E2798-1B12-4BB4-A796-E21EF90C2E6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D94E2798-1B12-4BB4-A796-E21EF90C2E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D94E2798-1B12-4BB4-A796-E21EF90C2E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D94E2798-1B12-4BB4-A796-E21EF90C2E6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06BE685E-373C-400B-8F81-AB724401B4C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06BE685E-373C-400B-8F81-AB724401B4C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06BE685E-373C-400B-8F81-AB724401B4C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06BE685E-373C-400B-8F81-AB724401B4C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -340,5 +352,7 @@ Global
 		{EFEA15B7-2DAF-4CBE-8FFE-D95E6D7C6A8A} = {95B94760-DB19-409B-9762-755DA2C7EA70}
 		{ACE0C50D-D108-430E-892C-7C8E406DFDC9} = {43F6F49D-43A4-4FB3-85BC-29999539F97F}
 		{84A313AA-C4D6-4A13-9F8E-E31C2D9CB441} = {43F6F49D-43A4-4FB3-85BC-29999539F97F}
+		{D94E2798-1B12-4BB4-A796-E21EF90C2E6B} = {4A81FF5C-2E35-49EE-B3CE-99D8572341E4}
+		{06BE685E-373C-400B-8F81-AB724401B4C2} = {4A81FF5C-2E35-49EE-B3CE-99D8572341E4}
 	EndGlobalSection
 EndGlobal
