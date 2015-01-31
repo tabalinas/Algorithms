@@ -59,6 +59,5 @@ namespace BinaryTreeLevelPrinting {
             return result.ToString();
         }
 
-        
     }
 }
