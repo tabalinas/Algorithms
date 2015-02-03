@@ -15,7 +15,6 @@ namespace Sorting {
             int min = Array.Min();
             int max = Array.Max();
 
-            int[] result = new int[Array.Length];
             int[] count = new int[max - min + 1];
 
             foreach(int num in Array) {
@@ -25,11 +24,9 @@ namespace Sorting {
             int k = 0;
             for(int i = 0; i < count.Length; i++) {
                 for(int j = 0; j < count[i]; j++) {
-                    result[k++] = i + min;
+                    Array[k++] = i + min;
                 }
             }
-
-            result.CopyTo(Array, 0);
         }
 
     }
