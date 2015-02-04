@@ -68,6 +68,18 @@ namespace Sotring.Test {
         }
 
         [TestMethod]
+        public void BucketSortingTest() {
+            // arrange
+            var array = new int[] { 2, 3, 2, 5, 6, 1, 4, 6, 2, 5, 8, 9, 1, 4, 6, 4, 11 };
+
+            // act
+            new BucketSorter(array, 3).Sort();
+
+            // assert
+            CollectionAssert.AreEqual(new int[] { 1, 1, 2, 2, 2, 3, 4, 4, 4, 5, 5, 6, 6, 6, 8, 9, 11 }, array);
+        }
+
+        [TestMethod]
         public void CountingSortingTest() {
             // arrange
             var array = new int[] { 2, 3, 2, 5, 6, 1, 4, 6, 2, 5, 8, 9, 1, 4, 6, 4 };

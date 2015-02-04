@@ -21,10 +21,10 @@ namespace Sorting {
                 count[num - min]++;
             }
 
-            int k = 0;
+            int index = 0;
             for(int i = 0; i < count.Length; i++) {
                 for(int j = 0; j < count[i]; j++) {
-                    Array[k++] = i + min;
+                    Array[index++] = i + min;
                 }
             }
         }
