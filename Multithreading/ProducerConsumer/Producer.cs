@@ -19,9 +19,9 @@ namespace ProducerConsumer {
 
             while(true) {
                 int value = GetValue();
-                Log("writing ({0} in buffer)", Buffer.Pointer);
+                Log("writing {0}", Buffer);
                 Buffer.Write(value);
-                Log("wrote \"{0}\" ({1} in buffer)", value, Buffer.Pointer);
+                Log("wrote \"{0}\" {1}", value, Buffer);
                 Sleep();
             }
         }

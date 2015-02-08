@@ -19,15 +19,20 @@ namespace ProducerConsumer {
             get { return _store; }
         }
 
-        private int _pointer = 0;
-
-        public int Pointer {
-            get { return _pointer; }
-            private set { _pointer = value; }
-        }
-
         private int Size {
             get { return Store.Length; }
+        }
+
+        private int Tail { get; set; }
+        private int Head { get; set; }
+        private int Count { get; set; }
+
+        public bool IsFull {
+            get { return Count == Size; }
+        }
+
+        public bool IsEmpty {
+            get { return Count == 0; }
         }
 
         public Buffer(int size = DEFAULT_SIZE) {
@@ -36,25 +41,43 @@ namespace ProducerConsumer {
 
         public void Write(T value) {
             lock(_sync) {
-                while(Pointer >= Size) {
+                while(IsFull) {
                     Monitor.Wait(_sync);
                 }
 
-                Store[Pointer++] = value;
+                DoWrite(value);
                 Monitor.PulseAll(_sync);
             }
         }
 
+        private void DoWrite(T value) {
+            Store[Tail] = value;
+            Tail = ++Tail == Size ? 0 : Tail;
+            Count++;
+        }
+
         public T Read() {
             lock(_sync) {
-                while(Pointer <= 0) {
+                while(IsEmpty) {
                     Monitor.Wait(_sync);
                 }
 
-                T value = Store[--Pointer];
+                T value = DoRead();
                 Monitor.PulseAll(_sync);
                 return value;
             }
+        }
+
+        private T DoRead() {
+            T result = Store[Head];
+            Store[Head] = default(T);
+            Head = ++Head == Size ? 0 : Head;
+            Count--;
+            return result;
+        }
+
+        public override string ToString() {
+            return String.Format("buffer: occupied {0}/{1} ({2}-{3})", Count, Size, Head, Tail);
         }
 
     }

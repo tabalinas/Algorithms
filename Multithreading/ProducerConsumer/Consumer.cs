@@ -16,9 +16,9 @@ namespace ProducerConsumer {
             Log("consumer started");
 
             while(true) {
-                Log("reading ({0} in buffer)", Buffer.Pointer);
+                Log("reading {0}", Buffer);
                 int value = Buffer.Read();
-                Log("read \"{0}\" ({1} in buffer)", value, Buffer.Pointer);
+                Log("read \"{0}\" {1}", value, Buffer);
                 Sleep();
             }
         }
