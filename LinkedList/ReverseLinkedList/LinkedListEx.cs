@@ -9,23 +9,23 @@ namespace ReverseLinkedList {
     public static class LinkedListEx {
 
         public static void Reverse<T>(this LinkedList<T> list) {
-            if(list.Head == null)
-                return;
-
-            list.Reverse(list.Head);
+            list.Head = Reverse(list.Head);
         }
 
-        private static void Reverse<T>(this LinkedList<T> list, LinkedList<T>.Node node) {
+        private static LinkedList<T>.Node Reverse<T>(LinkedList<T>.Node node) {
+            if(node == null)
+                return null;
+
+            if(node.Next == null)
+                return node;
+
             var next = node.Next;
-
-            if(next == null) {
-                list.Head = node;
-            } else {
-                list.Reverse(next);
-                next.Next = node;
-            }
-
             node.Next = null;
+
+            var result = Reverse(next);
+            next.Next = node;
+
+            return result;
         }
 
     }

@@ -16,9 +16,7 @@ namespace ReorderingLinkedList {
             
             var middle = list.Middle();
             CutOfFirstHalf(list, middle);
-            Reverse(list, middle);
-
-            var secondHalf = list.Head;
+            var secondHalf = Reverse(middle);
 
             Merge(list, firstHalf, secondHalf);
         }
@@ -43,17 +41,20 @@ namespace ReorderingLinkedList {
             current.Next = null;
         }
 
-        public static void Reverse<T>(LinkedList<T> list, LinkedList<T>.Node node) {
+        public static LinkedList<T>.Node Reverse<T>(LinkedList<T>.Node node) {
+            if(node == null)
+                return null;
+
+            if(node.Next == null)
+                return node;
+
             var next = node.Next;
-
-            if(next == null) {
-                list.Head = node;
-            } else {
-                Reverse(list, next);
-                next.Next = node;
-            }
-
             node.Next = null;
+
+            var result = Reverse(next);
+            next.Next = node;
+
+            return result;
         }
 
         private static void Merge<T>(LinkedList<T> list, LinkedList<T>.Node firstHalf, LinkedList<T>.Node secondHalf) {
